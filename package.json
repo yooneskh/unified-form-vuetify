@@ -1,0 +1,35 @@
+{
+  "name": "unified-form-vuetify",
+  "version": "0.1.0",
+  "description": "Vuetify form elements for Unified Form library",
+  "main": "mod.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "unified",
+    "form",
+    "form element",
+    "vuetify"
+  ],
+  "author": "Yoones Khoshghadam",
+  "homepage": "https://github.com/yooneskh/unified-form-vuetify",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yooneskh/unified-form-vuetify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yooneskh/unified-form-vuetify/issues"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "unified-form": ">= 0.2.2",
+    "vue": ">= 3.2.37",
+    "vuetify": ">= 3.0.0-beta.5"
+  },
+  "files": [
+    "./mod.js",
+    "components/"
+  ]
+}
