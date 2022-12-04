@@ -2,11 +2,9 @@ import { markRaw } from 'vue';
 import { registerFormElement, registerTransformer } from 'unified-form';
 
 
-import ElementText from './components/element-text.vue';
-
 registerFormElement({
   identifier: 'text',
-  component: markRaw(ElementText),
+  component: defineAsyncComponent(() => import('./components/element-text.vue')),
   valueProcessor: (v, f) => f.type === 'number' ? Number(v) : v
 });
 
@@ -17,4 +15,20 @@ registerTransformer({
     identifier: 'text',
     type: 'number',
   })
+});
+
+
+registerFormElement({
+  identifier: 'textarea',
+  component: defineAsyncComponent(() => import('./components/element-textarea.vue')),
+});
+
+registerFormElement({
+  identifier: 'checkbox',
+  component: defineAsyncComponent(() => import('./components/element-checkbox.vue')),
+});
+
+registerFormElement({
+  identifier: 'checkboxes',
+  component: defineAsyncComponent(() => import('./components/element-checkboxes.vue')),
 });

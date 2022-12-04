@@ -18,12 +18,13 @@ const emit = defineEmits([
 
 
 <template>
-  <v-text-field
+  <v-textarea
     :label="props.field.label"
     :variant="props.field.variant"
-    :type="props.field.type"
     :density="props.field.density"
     :direction="props.field.direction"
+    :rows="props.field.rows"
+    :max-rows="props.field.maxRows"
     :prepend-icon="props.field.prependIcon"
     :append-icon="props.field.appendIcon"
     :prepend-inner-icon="props.field.prepenInnerdIcon"

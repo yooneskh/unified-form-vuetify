@@ -26,7 +26,7 @@
   "peerDependencies": {
     "unified-form": ">= 0.2.2",
     "vue": ">= 3.2.37",
-    "vuetify": ">= 3.0.0-beta.5"
+    "vuetify": ">= 3.0.0"
   },
   "files": [
     "./mod.js",
