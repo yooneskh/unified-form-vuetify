@@ -26,7 +26,7 @@ const valueProxy = computed({
 <template>
   <div :class="{ 'd-flex align-center flex-wrap': props.field.inline }">
 
-    <v-label class="me-4">
+    <v-label class="me-4" :class="{ 'text-error': props.error, 'text-success': props.success, }">
       {{ props.field.label }}
     </v-label>
 
@@ -56,9 +56,11 @@ const valueProxy = computed({
       hide-details
     />
 
-    <p v-for="message of props.messages" :key="message" class="text-caption">
-      {{ message }}
-    </p>
+    <div v-if="props.messages?.length > 0" class="mt-2 text-error">
+      <p v-for="message of props.messages" :key="message" class="text-caption">
+        {{ message }}
+      </p>
+    </div>
 
   </div>
 </template>

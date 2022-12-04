@@ -44,13 +44,13 @@ const validations = ref({});
                   key: 'age', identifier: 'number', label: 'Age', width: 4,
                   rules: [
                     v => v >= 18 || 'Age must be more than 18'
-                  ]
+                  ],
                 },
                 {
                   key: 'conforms', identifier: 'checkbox', label: 'Do You Conform?', width: 4,
                   rules: [
                     v => v || 'You must conform'
-                  ]
+                  ],
                 },
                 {
                   key: 'bio', identifier: 'textarea', label: 'Biography', width: 6,
@@ -66,7 +66,10 @@ const validations = ref({});
                       value: 'physics',
                       title: 'Physics',
                     },
-                  ]
+                  ],
+                  rules: [
+                    v => v?.includes('physics') || 'You must select physics!'
+                  ],
                 },
               ]"
             />
