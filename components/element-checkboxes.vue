@@ -37,6 +37,7 @@ const valueProxy = computed({
       :direction="item.direction || props.field.direction"
       :prepend-icon="item.prependIcon || props.field.prependIcon"
       :append-icon="item.appendIcon || props.field.appendIcon"
+      :color="props.field.color"
       :true-icon="item.trueIcon || props.field.trueIcon"
       :false-icon="item.falseIcon || props.field.falseIcon"
       :indeterminate-icon="item.indeterminateIcon || props.field.indeterminateIcon"

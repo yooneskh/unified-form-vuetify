@@ -32,3 +32,8 @@ registerFormElement({
   identifier: 'checkboxes',
   component: defineAsyncComponent(() => import('./components/element-checkboxes.vue')),
 });
+
+registerFormElement({
+  identifier: 'select',
+  component: defineAsyncComponent(() => import('./components/element-select.vue')),
+});

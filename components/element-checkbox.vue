@@ -24,6 +24,7 @@ const emit = defineEmits([
     :direction="props.field.direction"
     :prepend-icon="props.field.prependIcon"
     :append-icon="props.field.appendIcon"
+    :color="props.field.color"
     :true-icon="props.field.trueIcon"
     :false-icon="props.field.falseIcon"
     :indeterminate-icon="props.field.indeterminateIcon"

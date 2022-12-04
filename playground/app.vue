@@ -71,6 +71,40 @@ const validations = ref({});
                     v => v?.includes('physics') || 'You must select physics!'
                   ],
                 },
+                {
+                  key: 'trainedIn', identifier: 'select', label: 'Your Trainings', width: 6,
+                  items: [
+                    {
+                      value: 'chemistery',
+                      title: 'Chemi',
+                    },
+                    {
+                      value: 'physics',
+                      title: 'Physics',
+                    },
+                  ],
+                  rules: [
+                    v => v === 'physics' || 'You must select physics!'
+                  ],
+                },
+                {
+                  key: 'trainedIns', identifier: 'select', label: 'Your Trainings all', width: 6,
+                  multiple: true, searchable: true, addable: true, chips: true,
+                  itemValue: 'field', itemTitle: 'name',
+                  items: [
+                    {
+                      field: 'chemistery',
+                      name: 'Chemi',
+                    },
+                    {
+                      field: 'physics',
+                      name: 'Physics',
+                    },
+                  ],
+                  rules: [
+                    v => v?.includes('physics') || 'You must select physics!'
+                  ],
+                },
               ]"
             />
           </v-card-text>
