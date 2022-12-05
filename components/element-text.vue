@@ -22,6 +22,7 @@ const emit = defineEmits([
     :label="props.field.label"
     :variant="props.field.variant"
     :type="props.field.type"
+    :inputmode="props.field.inputMode"
     :density="props.field.density"
     :direction="props.field.direction"
     :prepend-icon="props.field.prependIcon"
