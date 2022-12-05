@@ -1,4 +1,4 @@
-import { markRaw } from 'vue';
+import { defineAsyncComponent } from 'vue';
 import { registerFormElement, registerTransformer } from 'unified-form';
 
 
