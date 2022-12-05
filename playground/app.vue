@@ -107,7 +107,7 @@ const validations = ref({});
                 },
                 {
                   key: 'gender', identifier: 'radiobuttons', label: 'Gender', width: 6,
-                  inline: true, direction: 'rtl',
+                  inline: true,
                   items: [
                     {
                       value: 'chemistery',
