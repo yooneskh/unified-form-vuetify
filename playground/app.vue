@@ -102,7 +102,24 @@ const validations = ref({});
                     },
                   ],
                   rules: [
-                    v => v?.includes('physics') || 'You must select physics!'
+                    v => v?.includes?.('physics') || 'You must select physics!'
+                  ],
+                },
+                {
+                  key: 'gender', identifier: 'radiobuttons', label: 'Gender', width: 6,
+                  inline: true, direction: 'rtl',
+                  items: [
+                    {
+                      value: 'chemistery',
+                      title: 'Chemi',
+                    },
+                    {
+                      value: 'physics',
+                      title: 'Physics',
+                    },
+                  ],
+                  rules: [
+                    v => v === 'physics' || 'You must select physics!'
                   ],
                 },
               ]"

@@ -37,3 +37,8 @@ registerFormElement({
   identifier: 'select',
   component: defineAsyncComponent(() => import('./components/element-select.vue')),
 });
+
+registerFormElement({
+  identifier: 'radiobuttons',
+  component: defineAsyncComponent(() => import('./components/element-radiobuttons.vue')),
+});
