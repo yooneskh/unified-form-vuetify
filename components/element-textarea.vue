@@ -1,5 +1,7 @@
 <script setup>
 
+import { ref, computed } from 'vue';
+
 /* interface */
 
 const props = defineProps({
