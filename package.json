@@ -24,7 +24,7 @@
   },
   "license": "ISC",
   "peerDependencies": {
-    "unified-form": ">= 0.2.2",
+    "unified-form": ">= 0.3.0",
     "vue": ">= 3.2.37",
     "vuetify": ">= 3.0.0"
   },

@@ -14,6 +14,20 @@ const emit = defineEmits([
   'input',
 ]);
 
+
+/* variants */
+
+const hasVariants = computed(() =>
+  !!props.field.variants
+);
+
+const variants = computed(() =>
+  Object.keys(props.field.variants ?? {})
+);
+
+
+const selectedVariant = ref(variants.value[0]);
+
 </script>
 
 
@@ -35,11 +49,38 @@ const emit = defineEmits([
     :prefix="props.field.prefix"
     :suffix="props.field.suffix"
     :hint="props.field.hint"
-    :model-value="props.value"
-    @update:model-value="emit('input', $event)"
+    :model-value="hasVariants ? props.value?.[selectedVariant] : props.value"
+    @update:model-value="emit('input', $event, selectedVariant)"
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-  />
+    hide-details="auto">
+
+    <template v-if="hasVariants" #append-inner>
+
+      <v-btn
+        variant="tonal"
+        icon="mdi-none"
+        size="small"
+        density="comfortable"
+        class="me-2">
+
+        <div class="text-caption">
+          {{ selectedVariant }}
+        </div>
+
+        <v-menu activator="parent">
+          <v-list density="comfortable">
+            <v-list-item
+              v-for="variant of variants" :key="variant"
+              :title="variant"
+              @click="selectedVariant = variant"
+            />
+          </v-list>
+        </v-menu>
+      </v-btn>
+
+    </template>
+
+  </v-text-field>
 </template>

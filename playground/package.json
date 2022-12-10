@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
-    "unified-form": "0.2.3",
+    "unified-form": "0.3.0",
     "vite-plugin-vuetify": "1.0.0",
     "vuetify": "3.0.3"
   }

@@ -39,6 +39,10 @@ const validations = ref({});
               :fields="[
                 {
                   key: 'name', identifier: 'text', label: 'Name', width: 4,
+                  variants: {
+                    en: {},
+                    fa: {},
+                  },
                 },
                 {
                   key: 'age', identifier: 'number', label: 'Age', width: 4,
@@ -54,6 +58,10 @@ const validations = ref({});
                 },
                 {
                   key: 'bio', identifier: 'textarea', label: 'Biography', width: 6,
+                  variants: {
+                    en: {},
+                    fa: {},
+                  },
                 },
                 {
                   key: 'history', identifier: 'checkboxes', label: 'Histories', width: 6,
