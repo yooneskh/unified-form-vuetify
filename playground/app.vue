@@ -2,6 +2,16 @@
 
 const target = ref({
   name: '',
+  persons: [
+    {
+      name: 'Yoones',
+      lastName: 'Khoshghadam',
+    },
+    {
+      name: 'Test',
+      lastName: 'Tester',
+    },
+  ],
 });
 
 const validations = ref({});
@@ -129,6 +139,18 @@ const validations = ref({});
                   rules: [
                     v => v === 'physics' || 'You must select physics!'
                   ],
+                },
+                {
+                  key: 'persons', identifier: 'series', label: 'Persons',
+                  itemWidth: 6,
+                  itemFields: [
+                    {
+                      key: 'name', identifier: 'text', label: 'Name', width: 6,
+                    },
+                    {
+                      key: 'lastName', identifier: 'text', label: 'Last Name', width: 6,
+                    },
+                  ]
                 },
               ]"
             />

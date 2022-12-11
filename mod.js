@@ -3,6 +3,12 @@ import { registerFormElement, registerTransformer } from 'unified-form';
 
 
 registerFormElement({
+  identifier: 'series',
+  component: defineAsyncComponent(() => import('./components/element-series.vue')),
+});
+
+
+registerFormElement({
   identifier: 'text',
   component: defineAsyncComponent(() => import('./components/element-text.vue')),
   valueProcessor: (v, f) => f.type === 'number' ? Number(v) : v

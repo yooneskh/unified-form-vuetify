@@ -62,10 +62,10 @@ const selectedVariant = ref(variants.value[0]);
 
       <v-btn
         variant="tonal"
-        icon="mdi-none"
         size="small"
         density="comfortable"
-        class="me-2">
+        class="me-2 px-2"
+        style="min-width: 0;">
 
         <div class="text-caption">
           {{ selectedVariant }}
@@ -80,6 +80,7 @@ const selectedVariant = ref(variants.value[0]);
             />
           </v-list>
         </v-menu>
+
       </v-btn>
 
     </template>
