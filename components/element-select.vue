@@ -34,6 +34,7 @@ const emit = defineEmits([
     :prefix="props.field.prefix"
     :suffix="props.field.suffix"
     :hint="props.field.hint"
+    :persistent-hint="props.field.persistentHint"
     :multiple="props.field.multiple"
     :chips="props.field.chips"
     :closeable-chips="props.field.closeableChips"

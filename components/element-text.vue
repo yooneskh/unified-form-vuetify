@@ -51,6 +51,7 @@ const selectedVariant = ref(variants.value[0]);
     :prefix="props.field.prefix"
     :suffix="props.field.suffix"
     :hint="props.field.hint"
+    :persistent-hint="props.field.persistentHint"
     :model-value="hasVariants ? props.value?.[selectedVariant] : props.value"
     @update:model-value="emit('input', $event, selectedVariant)"
     :error="props.error"
