@@ -18,6 +18,7 @@ const emit = defineEmits([
 
 
 <template>
+
   <v-combobox
     v-if="props.field.addable"
     :label="props.field.label"
@@ -48,8 +49,18 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-  />
+    hide-details="auto">
+    <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
+      <v-btn
+        :density="action.icon ? 'comfortable' : undefined"
+        class="mt-n2"
+        v-bind="action">
+        <v-icon v-if="action.icon">{{ action.icon }}</v-icon>
+        <span v-else>{{ action.title }}</span>
+      </v-btn>
+    </template>
+  </v-combobox>
+
   <v-autocomplete
     v-else-if="props.field.searchable"
     :label="props.field.label"
@@ -79,8 +90,18 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-  />
+    hide-details="auto">
+    <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
+      <v-btn
+        :density="action.icon ? 'comfortable' : undefined"
+        class="mt-n2"
+        v-bind="action">
+        <v-icon v-if="action.icon">{{ action.icon }}</v-icon>
+        <span v-else>{{ action.title }}</span>
+      </v-btn>
+    </template>
+  </v-autocomplete>
+
   <v-select
     v-else
     :label="props.field.label"
@@ -110,6 +131,16 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-  />
+    hide-details="auto">
+    <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
+      <v-btn
+        :density="action.icon ? 'comfortable' : undefined"
+        class="mt-n2"
+        v-bind="action">
+        <v-icon v-if="action.icon">{{ action.icon }}</v-icon>
+        <span v-else>{{ action.title }}</span>
+      </v-btn>
+    </template>
+  </v-select>
+
 </template>
