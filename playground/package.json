@@ -9,12 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
+    "nuxt": "3.4.1"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
-    "unified-form": "0.3.0",
-    "vite-plugin-vuetify": "1.0.0",
-    "vuetify": "3.0.3"
+    "unified-form": "0.7.1",
+    "vite-plugin-vuetify": "1.0.2",
+    "vuetify": "3.1.14"
   }
 }
