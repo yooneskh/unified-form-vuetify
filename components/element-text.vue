@@ -91,7 +91,8 @@ const selectedVariant = ref(variants.value[0]);
         :density="action.icon ? 'comfortable' : undefined"
         class="mt-n2"
         v-bind="action">
-        {{ action.title }}
+        <v-icon v-if="action.icon">{{ action.icon }}</v-icon>
+        <span v-else>{{ action.title }}</span>
       </v-btn>
     </template>
 
