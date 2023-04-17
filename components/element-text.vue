@@ -86,5 +86,14 @@ const selectedVariant = ref(variants.value[0]);
 
     </template>
 
+    <template v-for="action of props.field.actions" #[action.side]>
+      <v-btn
+        :density="action.icon ? 'comfortable' : undefined"
+        class="mt-n2"
+        v-bind="action">
+        {{ action.title }}
+      </v-btn>
+    </template>
+
   </v-text-field>
 </template>

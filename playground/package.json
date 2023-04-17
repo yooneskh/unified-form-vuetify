@@ -16,5 +16,6 @@
     "unified-form": "0.7.1",
     "vite-plugin-vuetify": "1.0.2",
     "vuetify": "3.1.14"
-  }
+  },
+  "version": "0.1.0"
 }
