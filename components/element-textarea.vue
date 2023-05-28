@@ -89,7 +89,6 @@ const selectedVariant = ref(variants.value[0]);
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"
-        class="mt-n2"
         v-bind="action">
         <v-icon v-if="action.icon">{{ action.icon }}</v-icon>
         <span v-else>{{ action.title }}</span>
