@@ -26,6 +26,8 @@ const emit = defineEmits([
     :direction="props.field.direction"
     :prepend-icon="props.field.prependIcon"
     :inline="props.field.inline"
+    :readonly="props.field.readonly"
+    :disabled="props.field.disabled"
     :model-value="props.value"
     @update:model-value="emit('input', $event)"
     :error="props.error"
@@ -42,6 +44,8 @@ const emit = defineEmits([
         :density="item.density || props.field.density"
         :false-icon="item.falseIcon || props.field.falseIcon"
         :true-icon="item.trueIcon || props.field.trueIcon"
+        :readonly="item.readonly"
+        :disabled="item.disabled"
       />
 
       <div v-if="item.text" class="text-body-2 px-4 mb-2">
