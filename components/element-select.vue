@@ -29,7 +29,8 @@ const emit = defineEmits([
     :prepend-icon="props.field.prependIcon"
     :append-icon="props.field.appendIcon"
     :prepend-inner-icon="props.field.prependInnerIcon"
-    :color="props.field.color"
+    :base-color="props.success ? 'success' : undefined"
+    :color="props.success ? 'success' : props.field.color"
     :autofocus="props.field.autofocus"
     :placeholder="props.field.placeholder"
     :prefix="props.field.prefix"
@@ -51,10 +52,7 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-    :class="{
-      'text-success': props.success,
-    }">
+    hide-details="auto">
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"
@@ -75,7 +73,8 @@ const emit = defineEmits([
     :prepend-icon="props.field.prependIcon"
     :append-icon="props.field.appendIcon"
     :prepend-inner-icon="props.field.prependInnerIcon"
-    :color="props.field.color"
+    :base-color="props.success ? 'success' : undefined"
+    :color="props.success ? 'success' : props.field.color"
     :autofocus="props.field.autofocus"
     :placeholder="props.field.placeholder"
     :prefix="props.field.prefix"
@@ -94,10 +93,7 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-    :class="{
-      'text-success': props.success,
-    }">
+    hide-details="auto">
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"
@@ -119,7 +115,8 @@ const emit = defineEmits([
     :prepend-icon="props.field.prependIcon"
     :append-icon="props.field.appendIcon"
     :prepend-inner-icon="props.field.prependInnerIcon"
-    :color="props.field.color"
+    :base-color="props.success ? 'success' : undefined"
+    :color="props.success ? 'success' : props.field.color"
     :autofocus="props.field.autofocus"
     :placeholder="props.field.placeholder"
     :prefix="props.field.prefix"
@@ -138,10 +135,7 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto"
-    :class="{
-      'text-success': props.success,
-    }">
+    hide-details="auto">
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"
