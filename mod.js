@@ -1,5 +1,5 @@
 import { defineAsyncComponent } from 'vue';
-import { registerFormElement, registerTransformer } from 'unified-form';
+import { registerFormElement, registerTransformer, appendValueProcessor } from 'unified-form';
 
 
 registerFormElement({
@@ -11,7 +11,6 @@ registerFormElement({
 registerFormElement({
   identifier: 'text',
   component: defineAsyncComponent(() => import('./components/element-text.vue')),
-  valueProcessor: (v, f) => f.type === 'number' ? Number(v) : v
 });
 
 registerTransformer({
@@ -21,6 +20,11 @@ registerTransformer({
     identifier: 'text',
     type: 'number',
   })
+});
+
+appendValueProcessor({
+  criterion: f => f.type === 'number',
+  processor: v => Number(v),
 });
 
 

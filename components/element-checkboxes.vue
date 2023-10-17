@@ -1,5 +1,8 @@
 <script setup>
 
+import { computed } from 'vue';
+
+
 /* interface */
 
 const props = defineProps({
@@ -51,6 +54,8 @@ const valueProxy = computed({
       :false-value="item.falseValue || props.field.falseValue"
       multiple
       :value="item.value || item"
+      :readonly="item.readonly || props.field.readonly"
+      :disabled="item.disabled || props.field.disabled"
       v-model="valueProxy"
       :error="props.error"
       :success="props.success"

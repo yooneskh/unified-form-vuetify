@@ -52,6 +52,8 @@ const selectedVariant = ref(variants.value[0]);
     :suffix="props.field.suffix"
     :hint="props.field.hint"
     :persistent-hint="props.field.persistentHint"
+    :readonly="props.field.readonly"
+    :disabled="props.field.disabled"
     :model-value="hasVariants ? props.value?.[selectedVariant] : props.value"
     @update:model-value="emit('input', $event, selectedVariant)"
     :error="props.error"
@@ -84,6 +86,15 @@ const selectedVariant = ref(variants.value[0]);
 
       </v-btn>
 
+    </template>
+
+    <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
+      <v-btn
+        :density="action.icon ? 'comfortable' : undefined"
+        v-bind="action">
+        <v-icon v-if="action.icon">{{ action.icon }}</v-icon>
+        <span v-else>{{ action.title }}</span>
+      </v-btn>
     </template>
 
   </v-text-field>
