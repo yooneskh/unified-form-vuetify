@@ -51,7 +51,10 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto">
+    hide-details="auto"
+    :class="{
+      'text-success': props.success,
+    }">
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"
@@ -91,7 +94,10 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto">
+    hide-details="auto"
+    :class="{
+      'text-success': props.success,
+    }">
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"
@@ -132,7 +138,10 @@ const emit = defineEmits([
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto">
+    hide-details="auto"
+    :class="{
+      'text-success': props.success,
+    }">
     <template v-for="action of props.field.actions" #[action.side] :key="action.title + action.icon">
       <v-btn
         :density="action.icon ? 'comfortable' : undefined"

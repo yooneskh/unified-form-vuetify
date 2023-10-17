@@ -45,7 +45,7 @@ const selectedVariant = ref(variants.value[0]);
     :append-icon="props.field.appendIcon"
     :prepend-inner-icon="props.field.prependInnerIcon"
     :append-inner-icon="props.field.appendInnerIcon"
-    :color="props.success ? 'success' : props.field.color"
+    :color="props.field.color"
     :autofocus="props.field.autofocus"
     :placeholder="props.field.placeholder"
     :prefix="props.field.prefix"
@@ -59,7 +59,10 @@ const selectedVariant = ref(variants.value[0]);
     :error="props.error"
     :success="props.success"
     :messages="props.messages"
-    hide-details="auto">
+    hide-details="auto"
+    :class="{
+      'text-success': props.success,
+    }">
 
     <template v-if="hasVariants" #append-inner>
 
