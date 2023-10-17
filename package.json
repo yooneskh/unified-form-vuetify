@@ -1,6 +1,6 @@
 {
   "name": "unified-form-vuetify",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "description": "Vuetify form elements for Unified Form library",
   "main": "mod.js",
   "scripts": {
